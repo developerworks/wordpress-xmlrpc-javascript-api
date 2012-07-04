@@ -41,12 +41,13 @@ module("Wordpress API");
 
 // Change to your configuration
 var connection = {
-	url : "your xmlprc url such as http://www.exmaple.com/xmlrpc.php",
-	username : "you login name",
-	password : "you password"
-};
+		url : "http://www.scentlab.com/xmlrpc.php",
+		username : "mywordpress",
+		password : "8aznfdu2ggkl"  
+	};
 var wp = new WordPress(connection.url, connection.username, connection.password);
-
+	
+	
 test("WordPress.getPost", function(){
 	object = wp.getPost(1, 1);
 	equal(true, typeof object == "object", "类型正确");
@@ -64,7 +65,7 @@ test("WordPress.newPost", function(){
 			post_author: 1,
 			post_excerpt: '',
 			post_content: '通过Wordpress Xmlrpc API 创建文章测试',
-			post_format: '',
+			post_format: ''
 	};
 	object = wp.newPost(1, data);
 	equal(true, object > 0, "Post created");
@@ -86,7 +87,7 @@ test("WordPress.deletePost", function(){
 			post_author: 1,
 			post_excerpt: '',
 			post_content: '通过Wordpress Xmlrpc API 创建文章测试',
-			post_format: '',
+			post_format: ''
 	};
 	object = wp.newPost(1, data);
 	object = wp.deletePost(1,object);
@@ -111,7 +112,7 @@ test("WordPress.getPostFormats", function(){
 });
 test("WordPress.getPostFormats", function(){
 	object = wp.getPostStatusList(1);
-	equal(true, typeof object == "object", "OK")
+	equal(true, typeof object == "object", "OK");
 	equal(typeof object.draft, "object", "Have draft");
 	equal(typeof object.pending, "object", "Have pending");
 	equal(typeof object.private, "object", "Have private");
