@@ -1,6 +1,9 @@
 WordPress XmlRpc Javascript Api
 =====================
 
+Node: This lib was not developed
+    Please use https://github.com/armand1m/wordpress-api
+    
 WordPress XmlRpc Javascript Api is a wordpress api javascript client based on [mimic](http://mimic-xmlrpc.sourceforge.net/) xmlrpc client.
 It implement all interfaces descripted at [XML-RPC_WordPress_API](http://codex.wordpress.org/XML-RPC_WordPress_API).
 
